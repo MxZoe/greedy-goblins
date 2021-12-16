@@ -1,0 +1,20 @@
+.jumbotron{
+  text-align: center;
+}
+
+#display{
+  text-align: center;
+}
+
+#round{
+  text-align: center;
+}
+
+.cardButton{
+  margin: 1%;
+
+}
+
+.cardButton:disabled{
+  background-color: darkgray;
+}

@@ -15,4 +15,25 @@ make deck constructor(cardArray)
 
 player constructor(deck)
   -deck
+  -score
   -isActivePlayer
+
+
+
+  function displayActivePlayer(player1, player2){
+  if(player1.active){
+    $("#displayPlayer").html("It is " + player1.name + "'s turn.")
+  } else{
+    $("#displayPlayer").html("It is " + player2.name +"'s turn.")
+  }
+
+  function changeActivePlayer(player1, player2){
+  if(player1.active){
+    player1.active = false;
+    player2.active = true;
+  } else{
+    player1.active = true;
+    player2.active = false;
+  }
+}
+}
