@@ -70,8 +70,10 @@ function makeCards(){
 function getWinner(player1, player2){
   if(player1.score > player2.score){
     return player1;
-  } else{
+  } else if(player1.score < player2.score){
     return player2;
+  } else{
+    return "It's a tie!"
   }
 }
 
@@ -127,8 +129,12 @@ function displayRoundResult(player1, player2){
 
 function displayWinner(player1, player2, counter){
   if(counter > 8){
-    let winner = getWinner(player1, player2, counter)
-    alert(winner.name + " is the winner with a score of " + winner.score);
+    let winner = getWinner(player1, player2)
+    if(typeof winner == "string"){
+      alert(winner);
+    }else{
+      alert(winner.name + " is the winner with a score of " + winner.score);
+    }
   }
 }
 
